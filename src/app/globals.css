@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.red-square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
