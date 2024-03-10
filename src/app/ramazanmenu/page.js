@@ -2,6 +2,7 @@
 import MenuList from "../components/menuList";
 import parseCSV from "@/utils/parseCsv";
 import { useState, useEffect } from "react";
+import Spinner from "../components/spinner";
 
 export default function RamazanMenu() {
   const [loading, setLoading] = useState(true);
@@ -28,7 +29,12 @@ export default function RamazanMenu() {
       });
   }, []);
 
-  if (loading) return "Loading...";
+  if (loading)
+    return (
+      <div className="w-screen h-screen flex flex-row justify-center items-center">
+        <Spinner />
+      </div>
+    );
   else
     return (
       <>
