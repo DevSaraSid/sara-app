@@ -21,15 +21,12 @@ export default function MenuList({ data }) {
             );
           })
           .map((item) => (
-            <div className="flex flex-row space-x-3">
+            <div key={item.Date} className="flex flex-row space-x-3">
               <div className="flex flex-col items-center justify-center ">
                 <div className="text-sm">DAY</div>
                 <div className="font-medium text-4xl">{item["Day No."]}</div>
               </div>
-              <div
-                key={item.Date}
-                className="flex-1 relative flex space-x-3  rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-0 focus-within:ring-offset-0"
-              >
+              <div className="flex-1 relative flex space-x-3  rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-0 focus-within:ring-offset-0">
                 <div className="flex-shrink-0">
                   <Image
                     className="h-10 w-10 rounded-md"
