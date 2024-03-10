@@ -47,12 +47,12 @@ export default function MenuList({ data }) {
                     {item["Day Name"]}
                   </p>
                 </div>
-                {new Date(item.Date).toDateString() ===
+                {/* {new Date(item.Date).toDateString() ===
                   today.toDateString() && (
-                  <span className="inline-flex items-center rounded-md bg-yellow-400/10 px-5 py-1 text-xs font-medium text-yellow-600 ring-1 ring-inset ring-yellow-400/20">
+                  <span className="inline-flex items-center rounded-md bg-yellow-400/10 px-3 py-1 text-xs font-medium text-yellow-600 ring-1 ring-inset ring-yellow-400/20">
                     Today
                   </span>
-                )}
+                )} */}
               </div>
             </div>
           ))}
