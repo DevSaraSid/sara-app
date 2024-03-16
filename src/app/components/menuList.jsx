@@ -1,12 +1,15 @@
 import Image from "next/image";
 
 export default function MenuList({ data }) {
+  const offset = 1;
   const today = new Date();
+  today.setDate(today.getDate() + offset);
+
   const tomorrow = new Date(today);
-  tomorrow.setDate(today.getDate() + 1);
+  tomorrow.setDate(today.getDate() + 1 + offset);
 
   const dayAfterTomorrow = new Date(today);
-  dayAfterTomorrow.setDate(today.getDate() + 2);
+  dayAfterTomorrow.setDate(today.getDate() + 2 + offset);
 
   return (
     <>
@@ -56,6 +59,7 @@ export default function MenuList({ data }) {
               </div>
             </div>
           ))}
+        {/* <button className="border p-2 rounded-md"> Show Next 7 days </button> */}
       </div>
     </>
   );
